@@ -11,7 +11,7 @@ pipeline {
                 git clone https://github.com/khwahishindoria/robot-shop-jenkins.git
                 echo "intialization terraform"
                 ls -lrth
-                cd ${WORKSPACE}/robot-shop-jenkins/kubeadm-with-ec2/
+                cd ${WORKSPACE}/kubeadm-with-ec2/
                 terraform init
                 terraform apply -auto-approve
                 '''
