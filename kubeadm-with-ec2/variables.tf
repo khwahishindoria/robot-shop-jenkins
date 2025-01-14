@@ -22,5 +22,5 @@ output "load_balancer-dns" {
 }
 
 variable "workspace" {
-  default = "/var/lib/jenkins/robot-shop-deployment_main/"
+  default = "/var/lib/jenkins/workspace/robot-shop-deployment_main"
 }
