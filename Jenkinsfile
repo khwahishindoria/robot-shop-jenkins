@@ -20,7 +20,7 @@ pipeline {
                 ls -lrth
                 cd ${WORKSPACE}/robot-shop-jenkins/kubeadm-with-ec2/
                 temp_workspace=`echo $WORKSPACE | awk -F"/" '{print $NF}'`
-                sed -i "s/robot-shop-deployment_main/${temp_workspace}/g" variable.tf
+                sed -i "s/robot-shop-deployment_main/${temp_workspace}/g" variables.tf
                 terraform init
                 terraform apply -auto-approve
                 '''
