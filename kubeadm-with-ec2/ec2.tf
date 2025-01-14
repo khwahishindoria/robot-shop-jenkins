@@ -71,7 +71,7 @@ resource "aws_instance" "master-node" {
   }
 
   provisioner "file" {
-    source = "${var.workspace}/kubeadm-with-ec2/script-all-nodes.sh"
+    source = "${var.workspace}/robot-shop-jenkins/kubeadm-with-ec2/script-all-nodes.sh"
     destination = "/home/ubuntu/script-all-nodes.sh" 
   }
 
@@ -127,7 +127,7 @@ EOF
   }
 
   provisioner "file" {
-    source = "${var.workspace}/kubeadm-with-ec2/script-all-nodes.sh"
+    source = "${var.workspace}/robot-shop-jenkins/kubeadm-with-ec2/script-all-nodes.sh"
     destination = "/home/ubuntu/script-all-nodes.sh" 
   }
 
