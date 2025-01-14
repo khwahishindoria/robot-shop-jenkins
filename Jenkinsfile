@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('terraform-pull') {
+        stage('terraform-apply') {
             steps {
                 echo 'Building...'
                 sh '''
@@ -19,6 +19,8 @@ pipeline {
                 echo "intialization terraform"
                 ls -lrth
                 cd ${WORKSPACE}/robot-shop-jenkins/kubeadm-with-ec2/
+                temp_workspace=`echo $WORKSPACE | awk -F"/" '{print $NF}'`
+                sed -i "s/robot-shop-deployment_main/${temp_workspace}/g" variable.tf
                 terraform init
                 terraform apply -auto-approve
                 '''
