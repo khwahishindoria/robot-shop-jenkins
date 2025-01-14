@@ -7,7 +7,6 @@ pipeline {
                 sh '''
                 cd
                 echo "workspace is: ${WORKSPACE}"
-                rm -rf ${WORKSPACE}/Terraform/
                 cd ${WORKSPACE}
                 git clone https://github.com/khwahishindoria/robot-shop-jenkins.git
                 echo "intialization terraform"
