@@ -9,10 +9,10 @@ pipeline {
                 echo "workspace is: ${WORKSPACE}"
                 rm -rf ${WORKSPACE}/Terraform/
                 cd ${WORKSPACE}
-                git clone https://github.com/khwahishindoria/Terraform.git -b kubeadm-jenkins
+                git clone https://github.com/khwahishindoria/robot-shop-jenkins.git
                 echo "intialization terraform"
                 ls -lrth
-                cd ${WORKSPACE}/Terraform/kubeadm-with-ec2/
+                cd ${WORKSPACE}/robot-shop-jenkins/kubeadm-with-ec2/
                 terraform init
                 terraform apply -auto-approve
                 '''

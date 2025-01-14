@@ -20,3 +20,7 @@ output "worker-nodes-private-ip" {
 output "load_balancer-dns" {
   value = aws_lb.prod-alb.dns_name
 }
+
+variable "workspace" {
+  default = "/var/lib/jenkins/robot-shop-deployment_main/"
+}
