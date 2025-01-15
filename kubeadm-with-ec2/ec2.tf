@@ -5,7 +5,7 @@ resource "aws_key_pair" "prod-keypair" {
 
 resource "aws_instance" "prod-bastion" {
   ami                     = "ami-0866a3c8686eaeeba"
-  instance_type           = "t2.small"
+  instance_type           = "t2.medium"
   subnet_id = aws_subnet.prod-vpc_subnet1.id
   key_name = aws_key_pair.prod-keypair.key_name
   
